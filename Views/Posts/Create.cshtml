@@ -1,0 +1,26 @@
+﻿@model MattStuckyDev.Models.Post
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form class="createform" asp-action="Create">
+    <div asp-validation-summary="ModelOnly"></div>
+    <label class="titlelabel" asp-for="Title"></label>
+    <input class="titlebox" type="text" asp-for="Title"/>
+    <span asp-validation-for="Title"></span>
+    <label class="contentlabel" asp-for="Content"></label>
+    <textarea class="contentbox" rows="20" asp-for="Content"></textarea>
+    <span asp-validation-for="Content"></span>
+    <button class="createbutton" type="submit">Create</button>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

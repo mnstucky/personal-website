@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Matt Stucky, full-stack developer specializing in Node/React. Blog about programming. Portfolio of Matt's completed projects." />
+    <title>@ViewData["Title"] - Matt Stucky</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Posts" asp-action="Index">Blog</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Portfolio">Portfolio</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main" class="container">
+        @RenderBody()
+    </main>
+
+    <footer class="container">
+        <aside>&copy; 2021 - Matt Stucky</aside>
+        <partial name="_LoginPartial"/>
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/216d5e86f9.js" crossorigin="anonymous"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
